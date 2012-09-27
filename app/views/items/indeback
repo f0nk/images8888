@@ -1,0 +1,74 @@
+<%= search_form_for @search do |f| %>
+  <div class ="field">
+    <%= f.label :source_cont, "Search for a title" %>
+    <%= f.text_field :source_cont %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %> 
+
+
+<h1>Listing items</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Keywords</th>
+    <th>Description</th>
+    <th>Source</th>
+    <th>Article url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tmp.each do |item| %>
+  <tr>
+    <td><%= item.title %></td>
+    <td><%= item.keywords %></td>
+    <td><%= item.description %></td>
+    <td><%= item.source %></td>
+    <td><%= item.article_url %></td>
+    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Item', new_item_path %>
+
+
+
+<%=# image_tag() %>
+
+
+<p>
+  <b>Title:</b>
+  <%= @item.title %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @item.keywords %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @item.description %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @item.source %>
+</p>
+
+<p>
+  <b>Article url:</b>
+  <%= @item.article_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

@@ -1,0 +1,55 @@
+<!--
+<h2> Keywords are </h2>
+<%= @keywords[9] %>
+
+<h2>Title</h2>
+<%= @title[9] %>
+
+<h2>Description</h2>
+<%= @description[9] %>
+
+<h2>Article url</h2>
+<%= @article_urls[9] %>
+
+<h2>image url</h2>
+<%= @image_urls[9] %>
+
+
+<p> break </p>
+
+-->
+
+
+
+<!---
+<h2> Number of news - </h3>
+<p><%= @items.size %> </p>
+<p><%= @image_urls.each do|url| %>
+	<%= url %>
+	<% end %>
+
+
+
+
+ %> </p>
+
+<p> break </p>
+
+<!--
+
+<h2> Sites browsing currently </h3>
+<% @sites.each do |var| %>
+    <%=h var %><br>
+<% end %>
+
+
+<% @image_urls.each do |url| %>
+ 	<%= link_to( image_tag(url), url.to_s) %>
+
+
+<% end %>
+
+
+<% @image_urls.each do |var| %>
+    <%=h var %><br>
+<% end %>

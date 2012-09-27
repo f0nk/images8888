@@ -1,0 +1,55 @@
+
+body {
+  background-color: white;
+  color: white  ;
+  font-family: verdana, arial, helvetica, sans-serif;
+  text-align:center;
+
+}
+
+div.spinner {
+ display:block; 
+}
+
+div.pagination{
+  position:fixed;
+  top:95%;
+  right:50%;
+  z-index:1;
+
+}
+
+div.item {  
+  float:left;
+  margin:5px;
+  position:relative; /* important(so we can absolutely position the description div */
+  width: 250px; height: 150px; overflow: hidden; 
+}
+
+div.items {
+    width: 80%;
+    margin: 0px auto;
+}
+
+img {
+width: 100%;
+}
+
+
+div.navbar
+{
+display:block;
+float:left;
+width:100%;
+font-weight:bold;
+color:#FFFFFF;
+background-color:#98bf21;
+text-align:center;
+padding:10px;
+text-decoration:none;
+}
+
+a:hover,a:active
+{
+background-color:blue ;
+}

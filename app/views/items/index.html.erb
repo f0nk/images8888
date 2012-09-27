@@ -1,0 +1,10 @@
+<p>Currently <%= Item.count %> news items with <%= Picture.count %> images</p> 
+
+<%= will_paginate @items %>
+
+<div class = 'items' id ='items'>
+<%= render @items %>
+</div>
+
+
+

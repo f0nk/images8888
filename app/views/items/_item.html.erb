@@ -1,0 +1,5 @@
+  <%- item.pictures.each do |image| %>
+  <div class = 'item'>
+          <%= link_to image_tag(image.url.to_s, :title => item.created_at.to_s+ ' ' + item.title.strip + '..."'), item %>
+  </div>
+  <% end %>

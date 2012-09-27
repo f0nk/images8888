@@ -1,0 +1,61 @@
+<h2> Number of items - </h2>
+<p><%= @tmp.size %> </p>
+
+<h2> Number of pictures - </h2>
+<p><%= @xml_doc %> </p>
+
+
+<div class = 'page'>
+<%- @tmp.each do |item| %>
+  <%- item.pictures.each do |image| %>
+  <div class = 'item'>
+          <%= link_to image_tag(image.url.to_s, :title => item.created_at.to_s+ ' ' + item.title.strip + '..."'), image.url %>
+          <div class ='title'>
+           <!-- <div class = 'article_url'> <%=  link_to 'via', item.article_url %>  </div> -->
+          </div>
+  </div>
+  <% end %>
+<% end %>
+</div>
+
+<!--
+<script type="text/javascript"> 
+$('.page').isotope({
+  // options
+  itemSelector : '.item',
+  layoutMode : 'fitRows'
+});
+ </script> 
+
+
+
+<script type="text/javascript">     
+//We are using $(window).load here because we want to wait until the images are loaded
+$(window).load(function(){
+  //for each description div...
+  $('div.title').each(function(){
+    //...set the opacity to 0...
+    $(this).css('opacity', 0);
+    //..set width same as the image...
+    $(this).css('width', $(this).siblings('img').width());
+    //...get the parent (the wrapper) and set it's width same as the image width... '
+    $(this).parent().css('width', $(this).siblings('img').width());
+    //...set the display to block
+    $(this).css('display', 'block');
+  });
+
+  $('div.item').hover(function(){
+    //when mouse hover over the wrapper div
+    //get it's children elements with class description '
+    //and show it using fadeTo
+    $(this).children('.title').stop().fadeTo(100, 0.8);
+  },function(){
+    //when mouse out of the wrapper div
+    //use fadeTo to hide the div
+    $(this).children('.title').stop().fadeTo(100, 0);
+  });
+
+});
+
+ </script> 
+-->

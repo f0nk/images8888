@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<% images = @item.pictures %>
+
+
+<% images.each do |image|  %>
+
+<div class = 'item'>
+  <%= link_to image_tag(image.url.to_s, :title => @item.created_at.to_s+ ' ' + @item.title.strip + '..."'), image.url.to_s %>
+</div>
+<% end %>
+
+
+
+<p>
+  <b>Title:</b>
+  <%= @item.title %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @item.keywords %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @item.description %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @item.source %>
+</p>
+
+<p>
+  <b>Article url:</b>
+  <%= @item.article_url %>
+</p>
+
+<% @item.categorys.any? %>
+        <% @item.categorys.each do |category| %>
+        <%= link_to category.name, tagged_url(:category => category.name) %>
+<% end %>
+
+<% @item.sources.any? %>
+        <% @item.sources.each do |source| %>
+        <%= link_to source.name, tagged_url(:source => source.name) %>
+<% end %>
+
+<% @item.tags.any? %>
+        <% @item.tags.each do |tag| %>
+        <%= link_to tag.name, tagged_url(:tag => tag.name) %>
+<% end %>
+<p></p>
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

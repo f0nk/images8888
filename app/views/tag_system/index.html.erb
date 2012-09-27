@@ -1,0 +1,32 @@
+<h1>TagSystem#index</h1>
+<p>Find me in app/views/tag_system/index.html.erb</p>
+
+<%= @items.size %>
+<%= Picture.count %>
+
+<p><%= @testing1 %></p>
+
+<p><%= @title %></p>
+
+<%= @tags.size %>
+
+
+<%= form_for :tag, :url=>{:action =>"process"} do |f| %>
+	<div class = "field" >
+	  <%= collection_select(:tag, :item_id, @tags, :id, :name, {}, {multiple:true}) %>
+	</div>
+	 <div class = "actions">
+	 <%=f.submit "continue" %>
+	 </div>
+
+<%end%>
+
+
+<% @tags.each do |tag| %>
+  <%=  %>
+<% end %>
+
+<%- @img_link.each do |item| %>
+	
+	<p> <%= item %> </p>
+<% end %>
