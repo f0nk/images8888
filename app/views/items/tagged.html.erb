@@ -1,8 +1,7 @@
 <p>There are <%= @items.count %> news items tagged with <%= @tmp %> </p>
+
+<%= will_paginate @items %>
+
 <div class = 'items' id ='items'>
 <%= render @items %>
-</div>
-
-<div class = 'pagitems'>
-<%= will_paginate @items %>
 </div>

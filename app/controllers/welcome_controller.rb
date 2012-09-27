@@ -68,11 +68,11 @@ class WelcomeController < ApplicationController
 
           i = Item.new
           i.title = title
-          #i.keywords = item.xpath("category").inner_text.to_s.gsub( / /, "," )
+          i.keywords = item.xpath("category").inner_text.to_s.gsub( / /, "," )
           i.article_url = item.xpath("link").inner_text.to_s.strip
           i.source_list = @source.strip
           i.category_list = categ + ", All"
-          i.tag_list = title.gsub(' ',', ').gsub('-',' ').gsub(/([\:\/()'?".!-])/, '') + ',' + item.xpath("category").inner_text.to_s.split(/(?=[A-Z])/).join(' ').gsub(' ',',').gsub(',,',',').gsub(/([\:\/()'?".!-])/, '')
+          #i.tag_list = title.gsub(' ',', ').gsub('-',' ').gsub(/([\:\/()'?".!-])/, '') + ',' + item.xpath("category").inner_text.to_s.split(/(?=[A-Z])/).join(' ').gsub(' ',',').gsub(',,',',').gsub(/([\:\/()'?".!-])/, '')
           i.save
 
           img_link.each do |p|
