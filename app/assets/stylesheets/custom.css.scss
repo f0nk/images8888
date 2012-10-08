@@ -3,7 +3,7 @@ $navbarHeight: 60px;
 
 
 .navbar-inner {
-  background-color: black; /* background color will be black for all browsers */
+  background-color: white; /* background color will be black for all browsers */
   background-image: none;
   background-repeat: no-repeat;
   filter: none;
@@ -25,7 +25,7 @@ $navbarHeight: 60px;
 
 body {
 	position:center;
-  background-color: black;
+  background-color: #EEE;
 }
 
 div.spinner {
@@ -41,30 +41,58 @@ div.pagination{
 
 }
 
-div.item {  
+div.outeritem{
   float:left;
   margin:5px;
   position:relative; /* important(so we can absolutely position the description div */
-  width: 250px; height: 150px; overflow: hidden; 
+  width: 250px; height: 180px;
+  background-color:white;
+  box-shadow:1px 6px 12px -6px #A5A5A5;
+  border-top-left-radius:3px;
+  border-top-right-radius:3px;
+  border-bottom-left-radius:3px;
+  border-bottom-right-radius:3px;
+  p {
+    font-style:italic;
+  }
+}
 
+div.inneritem {
+  position:relative; /* important(so we can absolutely position the description div */
+  width: 250px; height: 150px; overflow: hidden; 
 }
 
 div.items {
-    width: 95%;
+    clear:both;
+    width: 80%;
     margin: 0px auto;
-
+  img:hover
+  {
+  border: 2px solid #EEE;
 }
 
 img {
 width: 100%;
+ border-top-left-radius:3px;
+  border-top-right-radius:3px;
+}
 
 
 }
 
-img:hover
-{
-border: 2px solid #00000F;
+div.item2{
+   float:left;
+  margin:5px;
+  position:relative; /* important(so we can absolutely position the description div */
 }
+
+div.basic-info{
+clear:both;
+  margin:10px;
+
+}
+
+
 
 
 /* universal */

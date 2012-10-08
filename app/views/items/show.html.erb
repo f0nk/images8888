@@ -2,39 +2,23 @@
 
 <% images = @item.pictures %>
 
-
 <% images.each do |image|  %>
 
-<div class = 'item'>
-  <%= link_to image_tag(image.url.to_s, :title => @item.created_at.to_s+ ' ' + @item.title.strip + '..."'), image.url.to_s %>
-</div>
-<% end %>
+  <div class = 'item2'>
+    <%= link_to image_tag(image.url.to_s, :title => @item.created_at.to_s+ ' ' + @item.title.strip + '..."'), image.url.to_s %>
+  </div>
+  <% end %>
 
 
-
+<div class='basic-info'
 <p>
   <b>Title:</b>
   <%= @item.title %>
 </p>
 
 <p>
-  <b>Keywords:</b>
-  <%= @item.keywords %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @item.description %>
-</p>
-
-<p>
-  <b>Source:</b>
-  <%= @item.source %>
-</p>
-
-<p>
   <b>Article url:</b>
-  <%= @item.article_url %>
+  <%= link_to 'link to article', @item.article_url %>
 </p>
 
 <% @item.categorys.any? %>
@@ -54,3 +38,5 @@
 <p></p>
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
+
+</div>

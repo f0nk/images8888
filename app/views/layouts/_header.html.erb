@@ -7,7 +7,7 @@
           <div class="btn-toolbar">
 
             <div class="btn-group">
-             <div class="btn btn-small btn-success" data-toggle="dropdown">Category</div>
+             <div class="btn btn-link" data-toggle="dropdown">Category</div>
                 <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                  <% @categorylist.each do |i| %>
                  <li><%= link_to i.name, "tagged?category=" + i.name %><li>
@@ -16,7 +16,7 @@
             </div>
 
             <div class="btn-group">
-             <div class="btn btn-small btn-info" data-toggle="dropdown">Source</div>
+             <div class="btn btn-link" data-toggle="dropdown">Source</div>
                 <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                  <% @sourcelist.each do |i| %>
                  <li><%= link_to i.name, "tagged?source=" + i.name %><li>
