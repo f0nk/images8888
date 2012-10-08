@@ -11,6 +11,7 @@ Images888::Application.routes.draw do
 
   get "welcome/index"
   get "welcome/scrape"
+  get "welcome/cleanup"
   
   match '/about', to: 'items#about'
   match '/tagcloud', to: 'items#tagcloud'

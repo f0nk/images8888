@@ -114,25 +114,7 @@ class ItemsController < ApplicationController
   end
 
   def about
-    @tagscount = []
-    @tagscount = ActiveRecord::Base.connection.execute("SELECT COUNT (*) FROM tags").to_s
-    @count = @tagscount[@tagscount.length-3].to_i
-
-    @tagscount2 = []
-    @tagscount2 = ActiveRecord::Base.connection.execute("SELECT COUNT (*) FROM taggings").to_s
-    @count2 = @tagscount2[@tagscount2.length-3].to_i
-
-    @numberofrows = Item.count + Picture.count + (3*Item.count)
-    @numberofrows.to_f
-    @threshold = 9990.to_f
-
-    if @numberofrows > @threshold
-        @items = Item.order("created_at ASC").limit(500)
-          @items.each do |i|
-            i.pictures.destroy_all
-         end
-        @items.destroy_all
-    end
+   
   end
 
 end
