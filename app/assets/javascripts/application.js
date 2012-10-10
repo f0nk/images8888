@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery.isotope.min
+//= require jquery.masonry.min
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .

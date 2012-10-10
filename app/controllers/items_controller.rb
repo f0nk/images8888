@@ -114,7 +114,11 @@ class ItemsController < ApplicationController
   end
 
   def about
-   
+     @search = Item.search(params[:q])
+    @items = @search.result.order("created_at DESC").page(params[:page]).per_page(20)
+    #@items = Item.order("created_at DESC").page(params[:page]).per_page(40)
+    @tmp2 = Item.all
+
   end
 
 end

@@ -60,7 +60,7 @@ class WelcomeController < ApplicationController
 
       @items.each do |item|
 
-        img_link =  item.to_html.scan(/http[^"]*jpg/).reject{|s|s.match(/http:\/\/media.movieweb.com\/i\/img\/feed\/fb.jpg/)}.reject{|t|t.include?('-70x53')}.reject{|k|k.include?('-550x')}.reject{|s|s.include?('--003')}.reject{|j|j.include?('-005')}.reject{|j|j.include?('tops')}.reject{|j|j.include?('-003.')}.reject{|j|j.include?('b.jpg')}.reject{|j|j.include?('h.jpg')}.reject{|j|j.include?('-007.jpg')}.uniq
+        img_link =  item.to_html.scan(/http[^"]*jpg/).reject{|s|s.match(/http:\/\/media.movieweb.com\/i\/img\/feed\/fb.jpg/)}.reject{|t|t.include?('-70x53')}.reject{|k|k.include?('-550x')}.reject{|s|s.include?('--003')}.reject{|j|j.include?('-005')}.reject{|j|j.include?('tops')}.reject{|j|j.include?('-003.')}.reject{|j|j.include?('b.jpg')}.reject{|j|j.include?('h.jpg')}.reject{|j|j.include?('-007.jpg')}.reject{|j|j.include?('470-75.jpg')}.uniq
 
         title = item.xpath("title").inner_text.to_s.strip
 

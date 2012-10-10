@@ -1,0 +1,139 @@
+$navbarHeight: 60px;
+@import 'bootstrap' ;
+
+
+.navbar-inner {
+  background-color: white; /* background color will be black for all browsers */
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+#rightMenuBtn{	
+	right:140px;
+
+}
+
+#tag_cloud {
+ width: 80%;
+    margin: 0px auto;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}
+
+body {
+	position:center;
+  background-color: #EEE;
+}
+
+div.spinner {
+ display:none; 
+}
+
+div.pagination{
+  position:fixed;
+  top:95%;
+  right:50%;
+  z-index:1;
+  display:none; 
+
+}
+
+div.outeritem{
+  float:left;
+  margin:5px;
+  position:relative; /* important(so we can absolutely position the description div */
+  width: 250px; height: 180px;
+  background-color:white;
+  box-shadow:1px 6px 12px -6px #A5A5A5;
+  border-top-left-radius:3px;
+  border-top-right-radius:3px;
+  border-bottom-left-radius:3px;
+  border-bottom-right-radius:3px;
+  p {
+    font-style:italic;
+  }
+}
+
+div.inneritem {
+  position:relative; /* important(so we can absolutely position the description div */
+  width: 250px; height: 150px; overflow: hidden; 
+}
+
+div.items {
+    clear:both;
+    width: 80%;
+    margin: 0px auto;
+  img:hover
+  {
+  border: 2px solid #EEE;
+}
+
+img {
+width: 100%;
+ border-top-left-radius:3px;
+  border-top-right-radius:3px;
+}
+
+
+}
+
+div.item2{
+   float:left;
+  margin:5px;
+  position:relative; /* important(so we can absolutely position the description div */
+}
+
+div.basic-info{
+clear:both;
+  margin:10px;
+
+}
+
+
+
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 70px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,18 @@
+var $container = $('#items');
+
+$container.imagesLoaded( function(){
+  $container.masonry({
+    itemSelector : '.inneritem'
+  });
+});
+
+
+//$('#items').append('<%= escape_javascript(render(@items)) %>');
+$container.append('<%= escape_javascript(render(@items)) %>').masonry( 'appended', '<%= escape_javascript(render(@items)) %>' );
+
+<% if @items.next_page %>
+  $('.pagination').replaceWith('<%= escape_javascript(will_paginate(@items)) %>');
+<% else %>
+  $('.pagination').remove();
+<% end %>
+<% sleep 1 %>

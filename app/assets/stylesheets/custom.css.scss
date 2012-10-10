@@ -58,8 +58,10 @@ div.outeritem{
 }
 
 div.inneritem {
+ float:left;
+  margin:5px;
   position:relative; /* important(so we can absolutely position the description div */
-  width: 250px; height: 150px; overflow: hidden; 
+  width: 250px;  overflow: hidden; 
 }
 
 div.items {
