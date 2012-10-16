@@ -1,4 +1,12 @@
-$('#items').append('<%= escape_javascript(render(@items)) %>');
+var $container = $('#items')
+
+var $items = $( "<%= escape_javascript(render(@items)) %>" );
+$container.append($items);
+$container.imagesLoaded( function () {
+  $container.masonry( "appended", $items, true );
+});
+
+
 <% if @items.next_page %>
   $('.pagination').replaceWith('<%= escape_javascript(will_paginate(@items)) %>');
 <% else %>

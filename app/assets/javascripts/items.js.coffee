@@ -3,6 +3,12 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
+  $container = $('#items')
+  $container.imagesLoaded ->
+    $container.masonry({
+      itemSelector : '.inneritem'
+    })
+
   if $('.pagination').length
     $(window).scroll ->
       url = $('.pagination .next_page').attr('href')
