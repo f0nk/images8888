@@ -2,8 +2,8 @@
 
 
 	  <div class = 'inneritem'>
-	          <!--<%= link_to image_tag(image.url.to_s, :title => item.created_at.to_s+ ' ' + item.title.strip + '..."'), '', :class => 'fancybox', :rel=>'group' %>-->
-	          <a href= <%= image.url.to_s %> class="fancybox" rel="gallery" title="Sample title 1"><img src=<%= image.url.to_s %> /></a>
+	          <!--<%= link_to image_tag(image.url.to_s, :title => item.created_at.to_s+ ' ' + item.title.strip + '..."'), image.url.to_s %>-->
+	          <a href= <%= image.url.to_s %> class="fancybox" rel="gallery" title="Sample title 1"><img src=<%= image.url.to_s %> /></a> 
 	  </div>
 
   <% end %>

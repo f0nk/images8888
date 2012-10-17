@@ -11,8 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require fancybox
 //= require jquery.masonry.min
+//= require jquery.isotope.min
+//= require fancybox
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .

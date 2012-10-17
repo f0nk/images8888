@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   
    def index
     @search = Item.search(params[:q])
-    @items = @search.result.order("created_at DESC").page(params[:page]).per_page(40)
+    @items = @search.result.order("created_at DESC").page(params[:page]).per_page(30)
     #@items = Item.order("created_at DESC").page(params[:page]).per_page(40)
     @tmp2 = Item.all
 

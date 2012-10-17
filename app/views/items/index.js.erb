@@ -1,12 +1,10 @@
 var $container = $('#items')
-$(document).ready(function() {
-  $("a.fancybox").fancybox();
-});
 
 var $items = $( "<%= escape_javascript(render(@items)) %>" );
 $container.append($items);
 $container.imagesLoaded( function () {
   $container.masonry( "appended", $items, true );
+  $("a.fancybox").fancybox();
 });
 
 
