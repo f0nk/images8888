@@ -1,4 +1,8 @@
-var $container = $('#items')
+$(document).ready(function() {
+  $("a.fancybox").fancybox();
+});
+
+/*var $container = $('#items')
 
 var $items = $( "<%= escape_javascript(render(@items)) %>" );
 $container.append($items);
@@ -14,7 +18,7 @@ $container.imagesLoaded( function () {
 <% end %>
 <% sleep 1 %>
 
-/*
+
 
 var $container = $('#items');
 

@@ -1,4 +1,7 @@
 var $container = $('#items')
+$(document).ready(function() {
+  $("a.fancybox").fancybox();
+});
 
 var $items = $( "<%= escape_javascript(render(@items)) %>" );
 $container.append($items);
@@ -12,4 +15,4 @@ $container.imagesLoaded( function () {
 <% else %>
   $('.pagination').remove();
 <% end %>
-<% sleep 1 %>
+<% sleep 1.5 %>

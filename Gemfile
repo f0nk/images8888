@@ -37,7 +37,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'fancybox-rails', :git => 'https://github.com/sverigemeny/fancybox-rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
