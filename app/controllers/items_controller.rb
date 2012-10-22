@@ -130,7 +130,7 @@ class ItemsController < ApplicationController
       end
 
       # setup your API key
-      Tmdb.api_key = "c60a134a7d0340412eac5aee682c1589"
+      Tmdb.api_key = ""
 
       # setup your default language
       Tmdb.default_language = "en"
