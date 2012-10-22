@@ -1,10 +1,18 @@
+# encoding: utf-8
+
 class ItemsController < ApplicationController
+
   # GET /items
   # GET /items.json
-  
    def index
     @search = Item.search(params[:q])
-    @items = @search.result.order("created_at DESC").page(params[:page]).per_page(30)
+    
+    @holder = @search.result.order("created_at DESC").limit(20)
+
+    @items = @search.result.order("created_at DESC").page(params[:page]).per_page(20)
+    #@items2 = @search.result.order("created_at DESC").page(params[:page]).per_page(1)
+
+
     #@items = Item.order("created_at DESC").page(params[:page]).per_page(40)
     @tmp2 = Item.all
 
@@ -110,6 +118,26 @@ class ItemsController < ApplicationController
   end
 
   def terms
+    @var = "Is 'Paranormal Activity 4' The Best Yet? Frightened Fans Weigh InNew ‘Wreck-It Ralph’ Clip'Star Trek Into Darkness' Teaser is NOT Being Unveiled on FacebookArnold Schwarzenegger's 'Total Recall' Book Debuts to Soft SalesLars von Trier Veterans Willem Dafoe, Udo Kier Complete 'Nymphomaniac' Cast ‘Paranorman’ and ‘Coraline’ Studio Laika Announces a 2014 Release  Seal Team Six: The Raid on Osama Bin Laden 'Geronimo' Clip + ‘Hungry Hungry Hippos: The Movie’ Is Really Happening"
+
+    #@test =  @var.match(/'[^']*'/)
+     @test = Array.new
+     @test = @var.scan(/‘[^’]*’| '[^']*'/)
+      @test.each do |s|
+        s.strip!
+        s[0] = ''
+        s.chop!
+      end
+
+      # setup your API key
+      Tmdb.api_key = "c60a134a7d0340412eac5aee682c1589"
+
+      # setup your default language
+      Tmdb.default_language = "en"
+
+      @movie = TmdbMovie.find(:title => "Iron Man", :expand_results => false, :limit => 1)
+
+      
 
   end
 
@@ -118,6 +146,7 @@ class ItemsController < ApplicationController
     @items = @search.result.order("created_at DESC").page(params[:page]).per_page(20)
     #@items = Item.order("created_at DESC").page(params[:page]).per_page(40)
     @tmp2 = Item.all
+
 
   end
 

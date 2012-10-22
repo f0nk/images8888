@@ -15,7 +15,7 @@ Images888::Application.routes.draw do
   
   match '/about', to: 'items#about'
   match '/tagcloud', to: 'items#tagcloud'
-  match '/terms', to: 'terms#terms'
+  match '/terms', to: 'items#terms'
 
   match 'tag_system' => 'tag_system#index', :as => 'tag_system'
   match 'tagged' => 'items#tagged', :as => 'tagged'

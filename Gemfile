@@ -10,6 +10,8 @@ gem 'bootstrap-sass'
 gem 'httpclient'
 gem 'nokogiri'
 
+gem 'ruby-tmdb3'
+
 gem 'acts-as-taggable-on'
 gem 'will_paginate', '> 3.0'
 

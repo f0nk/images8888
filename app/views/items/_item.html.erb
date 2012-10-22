@@ -2,11 +2,12 @@
 
 
 	  <div class = 'inneritem'>
+	  		<%= link_to image_tag(image.url.to_s),item,  :class=>"various", "data-fancybox-type" =>"iframe"  %>
+	  		
 	          <!--<%= link_to image_tag(image.url.to_s, :title => item.created_at.to_s+ ' ' + item.title.strip + '..."'), item %>
-
 	          <%= link_to image_tag(image.url.to_s, :title => item.created_at.to_s+ ' ' + item.title.strip + '..."'), image.url.to_s %>-->
-	          <!--<a href= <%= image.url.to_s %> class="fancybox" rel="gallery" title="Sample title 1"><img src=<%= image.url.to_s %> /></a> -->
-	          <a class="various" data-fancybox-type="iframe" href='/items/1179'><img src=<%= image.url.to_s %> /></a>
+	          <!--<a href= <%= image.url.to_s %> class="fancybox" rel="gallery" title="Sample title 1"><img src=<%= image.url.to_s %> /></a> 
+	           <a class="various" data-fancybox-type="iframe" href='/items/1179'><img src=<%= image.url.to_s %> /></a>-->	         
 
 	  </div>
   <% end %>
